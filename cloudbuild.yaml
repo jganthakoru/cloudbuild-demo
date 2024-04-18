@@ -26,7 +26,7 @@ steps:
     args: ['apply', '-f', 'kubernetes/app.yaml', '--validate=false']
     env:
       - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
-      - 'CLOUDSDK_CONTAINER_CLUSTER=app-services-cluster'
+       'CLOUDSDK_CONTAINER_CLUSTER=app-services-cluster'
    substitutions:
     PROJECT_ID: '$PROJECT_ID'
   
