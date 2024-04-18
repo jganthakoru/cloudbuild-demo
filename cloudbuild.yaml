@@ -20,7 +20,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/hello']
 
-  # Step 5: (Optional) Perform additional deployment steps such as applying Kubernetes manifests, running migrations, etc.
+# Step 5: (Optional) Perform additional deployment steps such as applying Kubernetes manifests, running migrations, etc.
   
   - name: 'gcr.io/cloud-builders/kubectl'
     args: ['apply', '-f', 'kubernetes/app.yaml', '--validate=false']
