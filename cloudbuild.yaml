@@ -29,4 +29,4 @@ steps:
       - 'CLOUDSDK_CONTAINER_CLUSTER=app-services-cluster'
   
   # Step6 Images produced by the build
-   images: ['gcr.io/$PROJECT_ID/hello']
+ images: ['gcr.io/$PROJECT_ID/hello']
