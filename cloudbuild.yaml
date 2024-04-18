@@ -13,7 +13,7 @@ steps:
   # Step 3: Build a Docker image containing the Spring Boot application
   
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/sample-rest/sample-rest', '.']
+    args: ['build', '-t', 'gcr.io/sample-rest-api/sample-rest', '.']
 
   # Step 4: Push the Docker image to Google Container Registry (GCR)
   
