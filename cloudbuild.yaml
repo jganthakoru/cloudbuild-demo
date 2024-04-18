@@ -24,9 +24,9 @@ steps:
   
   - name: 'gcr.io/cloud-builders/kubectl'
     args: ['apply', '-f', 'kubernetes/app.yaml', '--validate=false']
-	env:
+    env:
       - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
       - 'CLOUDSDK_CONTAINER_CLUSTER=app-services-cluster'
   
-  # Step6 Images produced by the build
- images: ['gcr.io/$(PROJECT_ID)/hello']
+  # Step6 Image produced by the build
+images: ['gcr.io/$(PROJECT_ID)/hello']
