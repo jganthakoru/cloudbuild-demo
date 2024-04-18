@@ -23,7 +23,7 @@ steps:
 # Step 5: (Optional) Perform additional deployment steps such as applying Kubernetes manifests, running migrations, etc.
   
   - name: 'gcr.io/cloud-builders/kubectl'
-    args: ['apply', '-f', 'kubernetes/sample-rest-api-kubernates.yaml', '--validate=false']
+    args: ['apply', '-f', 'kubernetes/app.yaml', '--validate=false']
     env:
        - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
        - 'CLOUDSDK_CONTAINER_CLUSTER=app-services-cluster'
