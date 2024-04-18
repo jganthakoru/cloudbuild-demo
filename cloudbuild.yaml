@@ -28,4 +28,4 @@ steps:
        - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
        - 'CLOUDSDK_CONTAINER_CLUSTER=app-services-cluster'
   # Step6 Image produced by the build
-images: ['gcr.io/sample-rest-api/sample-rest'
+images: ['gcr.io/sample-rest-api/sample-rest']
