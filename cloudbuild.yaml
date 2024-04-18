@@ -27,8 +27,8 @@ steps:
     env:
        - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
        - 'CLOUDSDK_CONTAINER_CLUSTER=app-services-cluster'
-    substitutions:
-       PROJECT_ID: '$PROJECT_ID'
+       - '_PROJECT_ID=$PROJECT_ID'
+
   
   # Step6 Image produced by the build
 images: ['gcr.io/$PROJECT_ID/hello']
