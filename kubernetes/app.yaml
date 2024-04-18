@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello
-        image: gcr.io/sample-rest-api/sample-rest-api:latest
+        image: gcr.io/sample-rest-api/sample-rest:latest
         ports:
         - containerPort: 8080
 ---
