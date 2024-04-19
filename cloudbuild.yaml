@@ -9,6 +9,9 @@ steps:
   - name: 'maven:3.6.3-jdk-11'
     entrypoint: 'mvn'
     args: ['clean', 'install']
+   
+   - name: ubuntu
+    args: ['bash','-c','sed -i "s,INIT_IMAGE_NAME,gcr.io/$PROJECT_ID/sample-rest," kubernetes/app.yaml']
 
   # Step 3: Build a Docker image containing the Spring Boot application
   
