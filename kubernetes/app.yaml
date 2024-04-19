@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sample-rest-api
+  name: sample-rest
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: sample-rest-api
+      app: sample-rest
   template:
     metadata:
       labels:
-        app: sample-rest-api
+        app: sample-rest
     spec:
       containers:
       - name: hello
-        image: gcr.io/sample-rest-api/sample-rest:latest
+        image: gcr.io/$(PROJECT_ID)/sample-rest:latest
         ports:
         - containerPort: 8080
 ---
@@ -24,7 +24,7 @@ metadata:
   name: sample-rest-api-service
 spec:
   selector:
-    app: sample-rest-api
+    app: sample-rest
   ports:
     - protocol: TCP
       port: 8080
