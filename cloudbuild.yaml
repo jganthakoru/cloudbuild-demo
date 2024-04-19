@@ -13,12 +13,12 @@ steps:
   # Step 3: Build a Docker image containing the Spring Boot application
   
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/${_PROJECT_ID}/sample-rest', '.']
+    args: ['build', '-t', 'gcr.io/${PROJECT_ID}/sample-rest', '.']
 
   # Step 4: Push the Docker image to Google Container Registry (GCR)
   
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/${_PROJECT_ID}/sample-rest']
+    args: ['push', 'gcr.io/${PROJECT_ID}/sample-rest']
 
 # Step 5: (Optional) Perform additional deployment steps such as applying Kubernetes manifests, running migrations, etc.
   
@@ -28,4 +28,4 @@ steps:
        - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
        - 'CLOUDSDK_CONTAINER_CLUSTER=app-services-cluster'
   # Step6 Image produced by the build
-images: ['gcr.io/${_PROJECT_ID}/sample-rest']
+images: ['gcr.io/${PROJECT_ID}/sample-rest']
