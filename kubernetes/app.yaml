@@ -13,8 +13,8 @@ spec:
         app: sample-rest
     spec:
       containers:
-      - name: hello
-        image: gcr.io/$(PROJECT_ID)/sample-rest:latest
+      - name: sample-rest
+        image: INIT_IMAGE_NAME
         ports:
         - containerPort: 8080
 ---
