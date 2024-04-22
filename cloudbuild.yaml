@@ -31,7 +31,7 @@ steps:
     args: ['apply', '-f', 'kubernetes/app.yaml', '--validate=false']
     env:
        - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
-       - 'CLOUDSDK_CONTAINER_CLUSTER=app-services-cluster'
+       - 'CLOUDSDK_CONTAINER_CLUSTER=my-first-cluster-1'
 
 # Step 7: Image produced by the build
 images: ['gcr.io/${PROJECT_ID}/sample-rest']
