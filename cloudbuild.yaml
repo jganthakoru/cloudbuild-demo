@@ -13,7 +13,7 @@ steps:
   # Step 3: Modify the Kubernetes YAML file to replace INIT_IMAGE_NAME with the actual image name
   
   - name: ubuntu
-    args: ['bash', '-c', 'sed -i "s,INIT_IMAGE_NAME,gcr.io/$PROJECT_ID/sample-rest," kubernetes/app.yaml']
+    args: ['bash', '-c', 'sed -i "s,INIT_IMAGE_NAME,gcr.io/$PROJECT_ID/sample-rest," kubernetes/app.yaml'] 
 
   # Step 4: Build a Docker image containing the Spring Boot application
   
