@@ -23,7 +23,7 @@ steps:
   # Step 5: Push the Docker image to Google Container Registry (GCR)
   
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/${PROJECT_ID}/sample-rest']
+    args: ['push', 'gcr.io/${PROJECT_ID}/sample-rest:$COMMIT_SHA']
 
   # Step 6: (Optional) Perform additional deployment steps such as applying Kubernetes manifests, running migrations, etc.
   
