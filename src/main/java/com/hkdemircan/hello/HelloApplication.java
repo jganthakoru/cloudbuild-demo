@@ -15,7 +15,7 @@ public class HelloApplication {
 
     @GetMapping("/display")
     public String getMessage(){
-        return "Hello World with Docker";
+        return "Hello World with Docker!";
     }
 
 }
